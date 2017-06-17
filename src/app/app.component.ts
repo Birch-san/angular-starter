@@ -20,13 +20,9 @@ import { AppState } from './app.service';
   ],
   template: `
     <nav>
-      <a uiSref="home2"
-        uiSrefActive="active">
-        Index
-      </a>
       <a uiSref="home"
         uiSrefActive="active">
-        Home
+        Index
       </a>
       <a uiSref="detail"
         uiSrefActive="active">
