@@ -147,6 +147,21 @@
     "@types/tapable" "*"
     "@types/uglify-js" "*"
 
+"@uirouter/angular@^1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-1.0.0-beta.6.tgz#c9cc4bd5448b886012784bb0dce761970774de18"
+  dependencies:
+    "@uirouter/core" "5.0.0"
+    "@uirouter/rx" "=0.3.1"
+
+"@uirouter/core@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.0.tgz#e8d4e13e8937999ebf5b10ad29de0b95fc338193"
+
+"@uirouter/rx@=0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@uirouter/rx/-/rx-0.3.1.tgz#66b098d3216f9eed2d8f3d11ad38367888ecb920"
+
 abbrev@1, abbrev@1.0.x:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.0.9.tgz#91b4792588a7738c25f35dd6f63752a2f8776135"
@@ -5897,16 +5912,9 @@ write-file-atomic@^2.0.0:
     imurmurhash "^0.1.4"
     slide "^1.1.5"
 
-ws@1.1.2:
+ws@1.1.2, ws@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/ws/-/ws-1.1.2.tgz#8a244fa052401e08c9886cf44a85189e1fd4067f"
-  dependencies:
-    options ">=0.0.5"
-    ultron "1.0.x"
-
-ws@^1.0.1:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-1.1.4.tgz#57f40d036832e5f5055662a397c4de76ed66bf61"
   dependencies:
     options ">=0.0.5"
     ultron "1.0.x"
