@@ -1,3 +1,4 @@
+import { UIRouterModule } from '@uirouter/angular';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -10,19 +11,20 @@ import {
   createNewHosts,
   createInputTransfer
 } from '@angularclass/hmr';
-import {
-  RouterModule,
-  PreloadAllModules
-} from '@angular/router';
+// import {
+//   RouterModule,
+//   PreloadAllModules
+// } from '@angular/router';
 
 /*
  * Platform and Environment providers/directives/pipes
  */
 import { ENV_PROVIDERS } from './environment';
-import { ROUTES } from './app.routes';
+// import { ROUTES } from './app.routes';
+import { STATES } from './app.states';
 // App is our top level component
 import { AppComponent } from './app.component';
-import { APP_RESOLVER_PROVIDERS } from './app.resolver';
+// import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
@@ -34,7 +36,7 @@ import '../styles/headings.css';
 
 // Application wide providers
 const APP_PROVIDERS = [
-  ...APP_RESOLVER_PROVIDERS,
+  // ...APP_RESOLVER_PROVIDERS,
   AppState
 ];
 
@@ -63,7 +65,8 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
+    // RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
+    UIRouterModule.forRoot({ states: STATES, useHash: true })
   ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.
