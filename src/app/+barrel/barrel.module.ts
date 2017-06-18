@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { UIRouterModule } from '@uirouter/angular';
 
-import { routes } from './barrel.routes';
+import { statesModule } from './barrel.states';
 import { BarrelComponent } from './barrel.component';
 
 console.log('`Barrel` bundle loaded asynchronously');
@@ -18,9 +18,8 @@ console.log('`Barrel` bundle loaded asynchronously');
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule.forChild(routes),
+    UIRouterModule.forChild(statesModule),
   ],
 })
 export class BarrelModule {
-  public static routes = routes;
 }
