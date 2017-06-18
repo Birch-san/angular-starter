@@ -19,10 +19,19 @@ console.log('`Barrel` component loaded asynchronously');
         Child Barrel
       </a>
     </span>
+    <input [(ngModel)]="state.epithet">
+    <pre [innerText]="state | json"></pre>
+    
     <ui-view></ui-view>
   `,
 })
 export class BarrelComponent implements OnInit {
+
+  public state = {
+    epithet: 'moe'
+  };
+
+  public tie = 'brown';
 
   public ngOnInit() {
     console.log('hello `Barrel` component');
