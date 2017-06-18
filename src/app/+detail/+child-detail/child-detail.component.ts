@@ -1,6 +1,5 @@
 import {
-  Component,
-  OnInit,
+  Component, Inject, OnInit,
 } from '@angular/core';
 /**
  * We're loading this component asynchronously
@@ -18,8 +17,12 @@ console.log('`ChildDetail` component loaded asynchronously');
 })
 export class ChildDetailComponent implements OnInit {
 
+  constructor(@Inject('account') public account) {
+  }
+
   public ngOnInit() {
     console.log('hello `ChildDetail` component');
+    console.log(`Account: <${this.account}>`);
   }
 
 }
