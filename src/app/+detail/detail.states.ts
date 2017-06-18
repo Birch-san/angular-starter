@@ -1,12 +1,9 @@
 import { DetailComponent } from './detail.component';
-import { Ng2StateDeclaration } from '@uirouter/angular';
-import { ChildDetailModule } from './+child-detail';
+import { StatesModule } from '@uirouter/angular';
 
-export const States: Ng2StateDeclaration[] = [
-  { name: 'detail', url: '/detail', component: DetailComponent },
-  ...ChildDetailModule.states
-  // { path: '', children: [
-  //   { path: '', component: DetailComponent },
-  //   { path: 'child-detail', loadChildren: './+child-detail#ChildDetailModule' }
-  // ]},
-];
+export const statesModule: StatesModule = {
+  states: [
+    { name: 'detail', url: '/detail', component: DetailComponent },
+    { name: 'detail.child-detail.**', loadChildren: './+child-detail#ChildDetailModule' }
+    ]
+};

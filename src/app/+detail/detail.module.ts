@@ -3,20 +3,20 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { UIRouterModule } from '@uirouter/angular';
 
-import { States } from './detail.states';
-import { Declarations } from './detail.declarations';
+import { statesModule } from './detail.states';
+import { DetailComponent } from './detail.component';
 
 console.log('`Detail` bundle loaded asynchronously');
 
 @NgModule({
-  declarations: Declarations,
+  declarations: [
+    DetailComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,
-    UIRouterModule.forChild(States),
+    UIRouterModule.forChild(statesModule),
   ],
 })
 export class DetailModule {
-  public static states = States;
-  public static declarations = Declarations;
 }
